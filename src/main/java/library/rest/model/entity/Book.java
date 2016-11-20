@@ -28,7 +28,7 @@ public class Book {
     String country;
 
     @Column(name = "date")
-    Date date;
+    java.sql.Date date;
 
     @Column(name = "link_on_image")
     String linkForImage;
@@ -92,7 +92,7 @@ public class Book {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(java.sql.Date date) {
         this.date = date;
     }
 
@@ -104,7 +104,7 @@ public class Book {
         this.linkForImage = linkForImage;
     }
 
-    public Book(int id, String name, String category, int year, String country, Date date, String linkForImage, String author) {
+    public Book(int id, String name, String category, int year, String country, java.sql.Date date, String linkForImage, String author) {
         this.id = id;
         this.name = name;
         this.category = category;

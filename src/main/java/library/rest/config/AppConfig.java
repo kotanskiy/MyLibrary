@@ -1,7 +1,7 @@
 package library.rest.config;
 
-import library.rest.dao.DaoLibrary;
-import library.rest.dao.hibernate.DaoLibImpl;
+import library.rest.model.dao.DaoLibrary;
+import library.rest.model.dao.hibernate.DaoLibImpl;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -30,8 +30,6 @@ public class AppConfig {
         resolver.setViewClass(JstlView.class);
         return resolver;
     }
-
-
 
     @Autowired
     public HibernateTransactionManager txManager;

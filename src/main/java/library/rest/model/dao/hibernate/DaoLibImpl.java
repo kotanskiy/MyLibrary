@@ -1,7 +1,7 @@
-package library.rest.dao.hibernate;
+package library.rest.model.dao.hibernate;
 
 
-import library.rest.dao.DaoLibrary;
+import library.rest.model.dao.DaoLibrary;
 import library.rest.model.entity.Book;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;

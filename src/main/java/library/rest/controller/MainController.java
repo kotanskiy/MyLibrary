@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 
+
+@RequestMapping("/rest")
+@Transactional
 @Controller
 public class MainController {
 
@@ -20,11 +23,11 @@ public class MainController {
     @Autowired
     private LibraryService libraryService;
 
-    @RequestMapping(value = "/rest", method = RequestMethod.GET)
-    @ResponseBody
-    @Transactional
-    public String getAllBooks() throws IOException {
+    @RequestMapping(method = RequestMethod.GET)
+    public @ResponseBody String getAllBooks() throws IOException {
         return objectMapper.writeValueAsString(libraryService.getAllBooks());
     }
+
+
 
 }

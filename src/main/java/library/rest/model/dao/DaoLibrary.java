@@ -1,4 +1,4 @@
-package library.rest.dao;
+package library.rest.model.dao;
 
 import library.rest.model.entity.Book;
 import org.hibernate.SessionFactory;
